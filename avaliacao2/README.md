@@ -1,0 +1,7 @@
+#Solução Desafio 4x4
+
+Primeiramente, criaria 4 métodos para ler e somar as linhas, colunas e diagonais. Portanto o primeiro método receberia como primeiro parâmetro uma matriz de inteiros, e como segundo parâmetro um inteiro, que seria a linha a ser lida. O segundo também receberia uma matriz e um inteiro como parâmetros para indicar a coluna a ser lida. Já para as diagonais, haveria um método para ler a diagonal da esquerda para direita e outra da esquerda para direita, ambos também recebendo uma matriz como parâmetro. Todas essas funções retornam um booleano, verdadeiro caso a soma seja 34 e falso caso não seja.
+
+Separadas essas funções, a estratégia seria percorrer toda a matriz para verificar quais números já foram preenchidos e após isso, alocar em um vetor os números restantes. Com isso criaria-se 2 loops, um para as linhas, e o outro para as colunas respectivamente. Dentro desses loops, haveria uma condicional verificando se a posição atual da matriz está vazia ou não, e caso estivesse vazia, alocaria um uma variável dentro do escopo do primeiro loop a posição atual e preencheria com um número aleatório do vetor de números não utilizados. Com isso, avançaria para a próxima posição repetindo o processo anterior até que chegue no índice limite, em que chamaria os métodos citados anteriormente verificando se a soma é 34 ou não. Sendo verdadeiro, passaria para a próxima linha, sendo falso, voltaria para a primeira coluna e repetiria o mesmo processo.
+
+Este processo se repetiria para cada coluna e linha, e por último seria validado as diagonais.
